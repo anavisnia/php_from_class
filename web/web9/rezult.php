@@ -2,7 +2,7 @@
 session_start();
 if(!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $postLength = count($_POST);
-    $_SESSION['rezult'] = $postLength;
+    // $_SESSION['rezult'] = $postLength;
 } else {
     echo '<h1>' . 'Nieko nepazymejote...' . '</h1>';
 }
@@ -17,9 +17,15 @@ if(!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
 <?php 
-if(!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo '<h1>' . 'Jus pazymejote: ' . ($_SESSION['rezult']) . ' is ' . ($_SESSION['randNum']) . '.' . '</h1>';
-}
+// if(!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+//     echo '<h1>' . 'Jus pazymejote: ' . ($_SESSION['rezult']) . ' is ' . ($_SESSION['randNum']) . '.' . '</h1>';
+// }
 ?>
 </body>
 </html>
+
+<?php 
+// unset($_SESSION['rezult']);
+// unset($_SESSION['randNum']);
+// session_destroy();
+?>

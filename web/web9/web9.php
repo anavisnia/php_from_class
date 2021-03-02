@@ -1,5 +1,7 @@
 <?php 
-session_start();
+// session_start();
+// unset($_SESSION['randNum']);
+// session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +19,7 @@ session_start();
     for($i = 0; $i< $randNum; $i++) {
         echo '<input type="checkbox" name="check' . $letetrs[$i] . '">' . $letetrs[$i];
     }
-    $_SESSION['randNum'] = $randNum;
+    // $_SESSION['randNum'] = $randNum;
     ?>
     <button type="submit">Select</button>
 </form>
