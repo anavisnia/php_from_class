@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 define('URL', 'http://localhost/bit/zuikis/login/'); // konstanta string pavidalu
 

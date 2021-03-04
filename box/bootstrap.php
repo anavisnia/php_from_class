@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 define('URL', 'http://localhost/bit/zuikis/box/'); // konstanta string pavidalu
 define('DIR', __DIR__.'/'); // savo parasyta konstanta, kuri visada rodys kur muks reikia
