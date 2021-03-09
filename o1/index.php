@@ -2,25 +2,33 @@
 include __DIR__ . '/Bebras.php';
 include __DIR__ . '/Udra.php';
 
-$obj1 = new Bebras;
-$obj2 = $obj1;
+// Bebras::createBebras();
+
+$obj1 = Bebras::createBebras(11);
+$obj2 = Bebras::createBebras(20);
 $obj3 = new Udra;
 
 echo '<pre>';
-echo $obj1->tail;
 echo '<br>';
+// echo Bebras::$legs; // priejimas prie static savybes
+// echo $obj1->tail;
+// echo '<br>';
 
-echo $obj1->tail;
+// echo $obj1->tail;
 
-echo '<br>';
-// echo $obj1->age;
-$obj1->sayTail();
-$obj1->getAge();
+// echo '<br>';
+// // echo $obj1->age;
+// $obj1->sayTail();
+// $obj1->getAge();
 
-$obj1->tail = 'SMALL';
+// $obj1->tail = 'SMALL';
 
-$obj1->setAge(13);
-$obj1->getAge();
+// $obj1->setAge(13);
+// $obj1->getAge();
+
+// $obj1->dog;
+// $obj1->laba;
+// echo '<br>';
 
 echo '<br>';
 var_dump($obj1);
