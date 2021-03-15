@@ -18,7 +18,7 @@ class Bebras {
     }
 
 
-    private function __construct($age = 11)
+    public function __construct($age = 11)
     {
         echo '<br>';
         echo 'Konstruojam';
@@ -26,12 +26,12 @@ class Bebras {
         echo self::$legs;
         self::$legs = 4;
         // imitacija overloadinimo
-        if(is_integer($age)) {
-            $this->init1($age);
-        }
-        if(is_string($age)) {
-            $this->init2($age);
-        }
+        // if(is_integer($age)) {
+        //     $this->init1($age);
+        // }
+        // if(is_string($age)) {
+        //     $this->init2($age);
+        // }
         $this->age = $age;
     }
 

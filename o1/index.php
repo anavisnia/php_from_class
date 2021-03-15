@@ -4,8 +4,10 @@ include __DIR__ . '/Udra.php';
 
 // Bebras::createBebras();
 
-$obj1 = Bebras::createBebras(11);
-$obj2 = Bebras::createBebras(20);
+// $obj1 = Bebras::createBebras(11);
+// $obj2 = Bebras::createBebras(20);
+$obj1 = new Bebras('red');
+$obj2 = new Bebras('20');
 $obj3 = new Udra;
 
 echo '<pre>';
