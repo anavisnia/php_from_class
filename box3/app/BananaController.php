@@ -5,6 +5,7 @@ class BananaController {
     public function index()
     {
         $pageTitle = 'Bananna Boxes';
+        $randDigit = Helper::getRandom();
         $boxes = Json::getDB()->readData();
         require DIR.'views/index.php';
     }

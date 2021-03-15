@@ -9,6 +9,7 @@ define('INSTALL_DIR', '/bit/zuikis/box3/');
 require DIR. 'app/BananaController.php';
 require DIR. 'app/Json.php';
 require DIR. 'app/Box.php';
+require DIR. 'app/Helper.php';
 
 
 // _d($_SESSION, 'SESIJA--->');
