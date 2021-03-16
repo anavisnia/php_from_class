@@ -1,4 +1,6 @@
 <?php
+namespace Miskas\Mazas;
+
 class Grybas {
     private $valgomas, $sukirmijes, $svoris;
 
