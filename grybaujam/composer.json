@@ -1,0 +1,16 @@
+{
+    "name": "anavi/zuikis",
+    "authors": [
+        {
+            "name": "Ana Višnevskaja",
+            "email": "anavisnia@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Miskas\\Didelis\\": "bla/",
+            "Miskas\\Mazas\\":"Miskas/Mazas/"
+        }
+    }
+}
