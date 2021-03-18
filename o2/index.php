@@ -1,4 +1,6 @@
 <?php
+include __DIR__ . '/Miskas.php';
+include __DIR__ . '/Giria.php';
 include __DIR__ . '/Eat.php';
 include __DIR__ . '/River.php';
 include __DIR__ . '/Bebras.php';

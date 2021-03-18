@@ -1,7 +1,6 @@
 <?php
 
-Class River extends Eat {
-
+abstract class River extends Eat {
     
     protected $river;
     private $gold = 400;
@@ -10,10 +9,14 @@ Class River extends Eat {
     {
         echo '<br>';
         echo 'Konstruojam RIVER';
+        $this->saySomething('Muuuu');
     }
 
     public function setRiver($river)
     {
         $this->river = $river;
     }
+
+    abstract public function saySomething(string $words) : void;
+    
 }

@@ -10,5 +10,15 @@ class Bebras extends River {
         $this->letsEat();
     }
 
+    public function saySomething(string $words) : void
+    {
+        foreach (range(1, 42) as $_) {
+            echo $words;
+        }
+    }
 
+    public  function saySomething2(string $words) : void
+    {
+        echo $words;
+    }
 }

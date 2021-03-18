@@ -1,7 +1,6 @@
 <?php
 
-class Udra extends River {
-    
+class Udra extends River implements Miskas {
     
     public function __construct()
     {
@@ -18,4 +17,20 @@ class Udra extends River {
 
     }
 
+    public function saySomething(string $words) : void
+    {
+        foreach (range(1, 3) as $_) {
+            echo $words;
+        }
+    }
+
+    public  function saySomething2(string $words) : void
+    {
+        echo $words;
+    }
+
+    public function bla1(string $word) : void
+    {
+        echo $word;
+    }
 }
