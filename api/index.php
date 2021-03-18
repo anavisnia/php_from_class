@@ -1,7 +1,13 @@
 <?php 
-$dist = 0;
+$dist = null;
 define ('API', 'https://www.distance24.org/route.json?stops=');
 if(!empty($_GET)) {
+
+    // if(!file_exists(__DIR__.'/data.json')) {
+    //     $empty = ['time' => time(), 'data' => []]
+    // }
+
+
     $city1 = $_GET['c1'];
     $city2 = $_GET['c2'];
 
@@ -9,20 +15,13 @@ if(!empty($_GET)) {
     $curl=curl_init();
     curl_setopt($curl, CURLOPT_URL, API.$city1.'|'.$city2);
     curl_setopt($curl,CURLOPT_RETURNTRANSFER,1);
-
     $answer = curl_exec($curl); // siunciame uzklausa, laukiame.... atsakyma irasome i $answer
-
     curl_close($curl);
-
     $answer = json_decode($answer);
-
-    _pc($answer);
-    _pc($answer->stops[0]->wikipedia->image);
-
     $dist = $answer->distance;
     $image1 = $answer->stops[0]->wikipedia->image ?? '';
     $image2 = $answer->stops[1]->wikipedia->image ?? '';
-    
+    $result = 'API';
 }
 ?>
 <!DOCTYPE html>
@@ -41,8 +40,9 @@ if(!empty($_GET)) {
     </form>
 <h2>Atstumas: <?= $dist ?> km</h2>
 <?php if(null !== $dist) : ?>
-    <img style="width:400px;" src="<?= $image1 ?>" alt="">
-    <img style="width:400px;" src="<?= $image2 ?>" alt="">
+    <h1 style="color:red;">Result from: <?= $result ?></h1>
+    <img style="height:400px;" src="<?= $image1 ?>" alt="">
+    <img style="height:400px;" src="<?= $image2 ?>" alt="">
 <?php endif ?>
 </body>
 </html>
