@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GardenController;
+use App\Http\Controllers\PostCalculatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,7 @@ Route::get('lara', function () {
 });
 // 'index' -> metodo vardas, kuris pasileis automatiskai
 Route::get('gates/{vaisius}/{id}', [GardenController::class, 'index']);
+
+Route::get('calc', [PostCalculatorController::class, 'show'])->name('show-cal');
+
+Route::post('calc', [PostCalculatorController::class, 'calc'])->name('do-math');
