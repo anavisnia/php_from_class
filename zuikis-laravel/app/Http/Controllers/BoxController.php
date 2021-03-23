@@ -55,7 +55,7 @@ class BoxController extends Controller
      */
     public function show(Box $box)
     {
-        // atskirai parodyti pilna info 
+        // atskirai parodyti pilna info
     }
 
     /**
