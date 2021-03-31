@@ -35,8 +35,8 @@ $sql =
 "SELECT name, height, id 
 FROM trees
 WHERE type = 2"; // <---- sql formavimas
-// salygos
 
+// salygos
 $sql = 
 "SELECT name, height, id 
 FROM trees
@@ -78,8 +78,17 @@ while ($row = $stmt->fetch())
     echo $row['id'] .': ' . $row['name'] . ' ' . $row['height'] . '<br>';
 }
 
-//                                        IRASYMAS I BD
+
+//                                        TRINIMAS
+$sql = "DELETE FROM trees WHERE name='Kastonas'"; // <--- sql formavimas
+// $pdo->query($sql); // perduodam vykdyti
+
+//                                        IRASYMAS I BD // INSERT
 
 $sql = "INSERT INTO trees (name, height, type)
 VALUES ('Kastonas', 7.99, 2)"; // <--- suformuojam 
 // $pdo->query($sql); // <--- perduodam i db
+
+//                                      REDAGAVIMAS // UPDATE
+$sql = "UPDATE trees SET height=88.33 WHERE name='Kastonas'";
+$pdo->query($sql); // perduodam vykdyti
